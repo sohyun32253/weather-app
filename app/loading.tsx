@@ -1,10 +1,8 @@
-import { Suspense } from "react";
-import HomeWeatherContent from "@/components/HomeWeatherContent";
 import SearchBar from "@/components/SearchBar";
 import HomeWeatherSkeleton from "@/components/skeletons/HomeWeatherSkeleton";
 import { CITIES } from "@/data/cities";
 
-export default function HomePage() {
+export default function Loading() {
   return (
     <main className="min-h-screen">
       <div className="mx-auto w-full max-w-md px-4 py-6 md:max-w-3xl lg:max-w-6xl lg:px-8 lg:py-10">
@@ -20,9 +18,7 @@ export default function HomePage() {
           <SearchBar cities={CITIES} className="lg:max-w-sm lg:shrink-0" />
         </header>
 
-        <Suspense fallback={<HomeWeatherSkeleton />}>
-          <HomeWeatherContent />
-        </Suspense>
+        <HomeWeatherSkeleton />
       </div>
     </main>
   );
