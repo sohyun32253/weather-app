@@ -25,6 +25,7 @@ export default async function HomeWeatherContent() {
           {cityWeathers.map(({ city, weather }) => (
             <Link key={city.id} href={`/city/${city.id}`} className="block">
               <WeatherCard
+              cityId={city.id}
                 cityName={city.name}
                 temperature={weather.temperature_2m}
                 weatherCode={weather.weather_code}

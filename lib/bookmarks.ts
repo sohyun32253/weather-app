@@ -18,8 +18,16 @@ export function getBookmarks(): string[] {
 }
 
 export function setBookmarks(ids: string[]): void {
-  localStorage.setItem(BOOKMARKS_STORAGE_KEY, JSON.stringify(ids));
-  window.dispatchEvent(new Event(BOOKMARKS_CHANGED_EVENT));
+  if (typeof window === "undefined") return;
+
+  localStorage.setItem(
+    BOOKMARKS_STORAGE_KEY,
+    JSON.stringify(ids)
+  );
+
+  window.dispatchEvent(
+    new Event(BOOKMARKS_CHANGED_EVENT)
+  );
 }
 
 export function toggleBookmark(id: string): string[] {

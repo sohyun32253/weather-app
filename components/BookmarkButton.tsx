@@ -39,7 +39,7 @@ export default function BookmarkButton({
       }}
       aria-label={bookmarked ? `${cityName} 북마크 해제` : `${cityName} 북마크`}
       aria-pressed={bookmarked}
-      className={`-mr-1 rounded-lg p-1.5 transition hover:bg-accent/10 ${bookmarked ? "text-accent" : "text-muted hover:text-accent"} ${className}`}
+      className={`-mr-1 rounded-lg  transition hover:bg-accent/10 ${bookmarked ? "text-accent" : "text-muted hover:text-accent"} ${className}`}
     >
       <BookmarkIcon filled={bookmarked} />
     </button>

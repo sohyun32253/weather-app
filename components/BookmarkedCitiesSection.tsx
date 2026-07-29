@@ -47,13 +47,12 @@ export default function BookmarkedCitiesSection({
           {bookmarkedCities.map(({ city, weather }) => (
             <Link key={city.id} href={`/city/${city.id}`} className="block">
               <WeatherCard
+              cityId={city.id}
                 cityName={city.name}
                 temperature={weather.temperature_2m}
                 weatherCode={weather.weather_code}
                 humidity={weather.relative_humidity_2m}
-                headerAction={
-                  <BookmarkButton cityId={city.id} cityName={city.name} />
-                }
+              
               />
             </Link>
           ))}
