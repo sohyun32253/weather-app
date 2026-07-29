@@ -8,7 +8,7 @@
 
 ## 🔗 배포 및 저장소
 
-- **배포 URL:** [Weather App 바로가기](weather-app-eight-lovat-22.vercel.app)
+- **배포 URL:** [Weather App 바로가기](https://weather-app-eight-lovat-22.vercel.app/)
 
 ---
 
